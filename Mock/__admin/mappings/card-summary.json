@@ -4,7 +4,7 @@
       "Matchers": [
         {
           "Name": "WildcardMatcher",
-          "Pattern": "/api/cards/0001134000028324397/summary"
+          "Pattern": "/api/cards/{cardId}/summary"
         }
       ]
     },
