@@ -18,7 +18,6 @@ namespace NUnit.Example
         {
             var port = new Random().Next(5000, 6000);
             baseUrl = "http://localhost:" + port;
-            // baseUrl = "https://apim-plat-neu-dev1-api.azure-api.net/vanquiscardscardsummary/";
 
             stub = FluentMockServer.Start(new FluentMockServerSettings
             {
