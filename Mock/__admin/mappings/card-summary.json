@@ -1,0 +1,36 @@
+{
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "WildcardMatcher",
+          "Pattern": "/api/cards/0001134000028324397/summary"
+        }
+      ]
+    },
+    "Methods": [
+      "get"
+    ]
+  },
+  "Response": {
+    "Status": 200,
+    "BodyAsJson": {
+      "accountId": "11111",
+      "customerId": "11111",
+      "creditLimit": "1750",
+      "currentBalance": "345.55",
+      "availableCredit": "123.00",
+      "amountDue": "80",
+      "nextPaymentDueDate": "2015-07-20",
+      "nextPaymentDueAmount": "string",
+      "paymentMethod": "DirectDebit",
+      "paymentUrgency": "Soon",
+      "cpaStatus": "Valid",
+      "status": "Open",
+      "paymentsMissed": 0
+    },
+    "Headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
