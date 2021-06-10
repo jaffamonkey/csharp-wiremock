@@ -37,39 +37,10 @@ namespace NUnit.Example
         public void Test()
         {
             var bodyContent = new[] {
-        pendingTransactions =  new {
-          transactionId = "string",
-          accountId = "string",
-          effectiveDate = "2015-07-20",
-          effectiveTime = "15:49:04-07:00",
-          postedDate = "2015-07-20T15:49:04-07:00",
-          debitOrCredit = "Debit",
-          description = "string",
-          payment = true,
-          paymentMethod = "PayerNotPresent",
-          amount = "160.56",
-          currency = "GBP",
-          balance = "string",
-          reference = "string"
-        },
-        new {
-        postedTransactions = new{
-          transactionId = "string",
-          accountId = "string",
-          effectiveDate = "2015-07-20",
-          effectiveTime = "string",
-          postedDate = "2015-07-20T15:49:04-07:00",
-          debitOrCredit = "Debit",
-          description = "string",
-          payment = true,
-          paymentMethod = "PayerNotPresent",
-          amount = "string",
-          currency = "GBP",
-          balance = "string",
-          reference = "string"
-        },
-        },
-    };
+                                new {id = 1, description = "Book A" },
+                                new {id = 2, description = "Book B" }
+                            };
+
             stub.Given(
                 Request
                 .Create()
