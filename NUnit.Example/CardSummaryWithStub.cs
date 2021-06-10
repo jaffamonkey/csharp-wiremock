@@ -57,7 +57,7 @@ namespace NUnit.Example
             stub.Given(
                 Request
                 .Create()
-                    .WithPath("/api/cards/0001134000028324397/summary"))
+                    .WithPath("/api/cards/{cardId}/summary"))
                 .RespondWith(
                     Response.Create()
                         .WithStatusCode(200)
@@ -65,7 +65,7 @@ namespace NUnit.Example
                         .WithBodyAsJson(bodyContent));
 
             var client = new RestClient(baseUrl);
-            var request = new RestRequest("/api/cards/0001134000028324397/summary");
+            var request = new RestRequest("/api/cards/{cardId}/summary");
 
             var response = client.Execute(request);
             Console.WriteLine("Your response data is: " + response.Content);

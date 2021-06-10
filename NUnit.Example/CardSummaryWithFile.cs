@@ -18,7 +18,6 @@ namespace NUnit.Example
         {
             var port = new Random().Next(5000, 6000);
             baseUrl = "http://localhost:" + port;
-            // baseUrl = "https://apim-plat-neu-dev1-api.azure-api.net/vanquiscardscardsummary/";
 
             stub = FluentMockServer.Start(new FluentMockServerSettings
             {
@@ -55,7 +54,7 @@ namespace NUnit.Example
             };
 
             var client = new RestClient(baseUrl);
-            var request = new RestRequest("/api/cards/0001134000028324397/summary");
+            var request = new RestRequest("/api/cards/{cardId}/summary");
 
             var response = client.Execute(request);
             Console.WriteLine("Your response data is: " + response.Content);
