@@ -54,7 +54,7 @@ namespace NUnit.Example
             };
 
             var client = new RestClient(baseUrl);
-            var request = new RestRequest("/api/cards/0001134000028324397/summary");
+            var request = new RestRequest("/api/cards/{cardId}/summary");
 
             var response = client.Execute(request);
             Console.WriteLine("Your response data is: " + response.Content);
